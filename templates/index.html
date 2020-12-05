@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Price</title>
+    <style type="text/css">
+        body{
+        background-color:#f4f3f2;
+        }
+       .photo{
+            display: block;
+            margin:0 auto;
+            margin-left: 100px;
+            margin-top: 50px;
+            width: 40%;
+            height:40%;
+            }
+       #txt{
+            font-family:verdana;
+            font-size:300%;
+            text-align: center;
+            color:#141412;
+       }
+       .art{
+            margin-top:10px;
+            margin-left:50px;
+       }
+       #tab{
+            width:50%;
+            font-size: 15px;
+       }
+       .tab1{
+            font-size: 20px;
+       }
+    </style>
+</head>
+<body method="POST">
+<h3 id="txt"><span style="color:#f6b86c;">B</span>itcoin Price</h3>
+    <a href="https://www.coindesk.com/price/bitcoin" target="_blank" rel="noreferrer noopener">
+        <img class="photo" src="{{ url_for('static', filename='bitcoin2.jpg') }}" alt="BitCoin" />
+    </a>
+    <br><br>
+    <section class="art">
+        <table border="0" cellspacing="6" cellpadding="2" id="tab">
+            <tr>
+                <td style="color:#92d915; " class="tab1">{{USD}}</td>
+                <td style="color:#fbc51c;" class="tab1">{{GBP}}</td>
+                <td style="color:#2ca5fc" class="tab1">{{EUR}}</td>
+            </tr>
+            <tr>
+                <td style="font-size:15px;">{{pd}}<span style="color:#7cc800;">$</span></td>
+                <td style= "font-size:15px;">{{pg}}<span style="color:#fbc51c;">£</span></td>
+                <td style=" font-size:15px;">{{pe}}<span style="color:#25a0ff;">€</span></td>
+            </tr>
+        </table>
+    </section>
+    <br><br>
+    <section class="art">
+        <h5>{{time}}</h5>
+    </section>
+    <footer>
+        <p style="text-align:center" >
+            &copy; 2020<br/>
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+</body>
+</html>
